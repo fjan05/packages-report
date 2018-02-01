@@ -21,7 +21,17 @@ ipt <- installed.packages() %>%
 library(here)
 write_csv(ipt,path=here("data","installed-packages.csv"))
 
-
-
 ## when this script works, stage & commit it and the csv file
 ## PUSH!
+
+View(ipt)
+
+test=read_csv(here("data","installed-packages.csv"))
+
+#here("data","installed-packages.csv")
+#here("data","whatever_other-folder","installed-packages.csv")
+
+library(Hmisc)
+describe(test)
+
+?here
